@@ -17,16 +17,37 @@
 //   }
 // }
 
-export default class character {
-  constructor(name, house) {
+export class Character {
+  constructor(name, house, charSkills) {
     this.name = name;
     this.house = house;
     this.level = 1;
     this.special = '';
-    // this.stats = {strength: 
-    //         intelligence: 
-    //         }
-    // this.inventory = [all their items]
-    // this.hitpoints = // for battle stuff
+    this.skills = charSkills;
+
   }
 }
+
+export class Skills {
+  constructor(strength, intelligence, charisma) {
+    this.strength = strength;
+    this.intelligence = intelligence;
+    this.charisma = charisma;
+  }
+}
+  addSkills() {
+    //     if house = "house" {
+    //       special = "specialAbility"
+    //     }
+    //     switch 
+    //     case: Lannister
+    //     character.charisma += 1
+  }
+//   }
+// }
+//    this.stats = {strength: 
+//         intelligence: 
+//         }
+// this.inventory = [all their items]
+// this.hitpoints = // for battle stuff
+
