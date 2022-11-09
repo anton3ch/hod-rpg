@@ -24,9 +24,26 @@ export class Character {
     this.level = 1;
     this.special = '';
     this.skills = charSkills;
-
+  }
+  
+  addHouseBonus() {
+    switch(this.house) {
+    case "Strong":
+      this.special = "Flee-advantage";
+      break;
+    case "Lannister":
+      this.special = "Hit-advantage";
+      break;
+    case "Targaryen":
+      this.special = "Fire-resistant";
+      break;
+    case "Stark":
+      this.special = "Cold-resistant";
+      break;            
+    }
   }
 }
+
 
 export class Skills {
   constructor(strength, intelligence, charisma) {
@@ -35,14 +52,6 @@ export class Skills {
     this.charisma = charisma;
   }
 }
-  addSkills() {
-    //     if house = "house" {
-    //       special = "specialAbility"
-    //     }
-    //     switch 
-    //     case: Lannister
-    //     character.charisma += 1
-  }
 //   }
 // }
 //    this.stats = {strength: 
