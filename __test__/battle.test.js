@@ -19,6 +19,12 @@ describe('Battlefield', () => {
     expect(battle.monster.name).toEqual("Ice Dragon");
   });
 
+  test('should create battlefield method that will display character and monster stats', () => {
+    expect(battle.showInitialStats()).toEqual(`Larys vs Ice Dragon
+Health:
+20HP vs 10HP`);
+  });
+
   // battle(larysCharacter, iceDragon) {
   //   this.hero = 
   //   this.monster =

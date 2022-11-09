@@ -11,7 +11,11 @@ export class Battlefield {
     this.character = character;
     this.monster = monster;
   }
+
+  showInitialStats() {
+    return `${this.character.name} vs ${this.monster.name}\nHealth:\n${this.character.health}HP vs ${this.monster.health}HP`
+  }
 //   displayStats(monster, character) {
-//     return `${character.name} : ${character.health}, ${monster.name} ${monster.health}`
+//     return `${character.name} : ${this.character.health}, ${monster.name} ${monster.health}`
 //   }
 }
