@@ -1,0 +1,1 @@
+import {Monster} from '../src/js/monsters.js';

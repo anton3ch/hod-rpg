@@ -36,6 +36,11 @@ describe('Character', () => {
     expect(larysCharacter.special).toEqual("Flee-advantage");
   });
 
+  test('should "level up" the character by increasing level by 1', () => {
+    larysCharacter.levelUp();
+    expect(larysCharacter.level).toEqual(2);
+  });
+
 });
 
 describe('Skills', () => {
