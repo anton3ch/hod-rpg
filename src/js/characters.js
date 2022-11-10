@@ -6,6 +6,7 @@ export class Character {
     this.special = '';
     this.skills = charSkills;
     this.health = 20;
+    this.inventory = [];
   }
   
   addHouseBonus() {
@@ -36,6 +37,17 @@ export class Character {
       break;            
     }
   }
+
+  levelUp() {
+    this.level++;
+    this.skills.charisma++;
+    this.skills.strength++;
+    this.skills.intelligence++;
+  }
+
+  addItem(item) {
+    this.inventory.push(item);
+  }
 }
 
 export class Skills {
@@ -43,5 +55,14 @@ export class Skills {
     this.strength = 0;
     this.intelligence = 0;
     this.charisma = 0;
+  }
+}
+
+export class Item {
+  constructor(name, strength, intelligence, charisma) {
+    this.name = name;
+    this.strength = strength;
+    this.intelligence = intelligence;
+    this.charisma = charisma;
   }
 }
